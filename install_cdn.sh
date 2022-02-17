@@ -25,11 +25,11 @@ install() {
     $cmd update -y
     $cmd install curl wget screen -y
     mkdir /root/SSLminerproxy
-    wget https://https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/SSLminerProxy
+    wget https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/SSLminerProxy
 
     chmod 777 /root/SSLminerproxy/SSLminerProxy
 
-    wget https://https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerproxy/run.sh
+    wget https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerproxy/run.sh
 	
     chmod 777 /root/SSLminerproxy/run.sh
 	
