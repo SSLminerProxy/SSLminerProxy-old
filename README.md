@@ -14,13 +14,15 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/install_cdn.
 
 （提示"screen: 未找到命令" 请先安装screen 再安装SSLminerProxy）
 ```
+自定义SSL证书：请申请一年的免费域名证书（自行百度）申请后下载nginx版本证书，
+将.crt文件改名cert.crt ，将.key文件改成key.pem
+
 纯转发模式使用后算力截图，算力几乎无损耗。
 ![img_9.png](img_9.png)
 
 # 矿工交流 TG电报群：https://t.me/SSLminerProxy 
 # QQ群：923469225
 
-SSL请申请一年的免费域名证书（自行百度）申请后下载nginx版本证书，将.crt文件改名cert.crt ，将.key文件改成key.pem
 
 # windows-手动安装
 ```bash
