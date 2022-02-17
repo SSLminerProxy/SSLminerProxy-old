@@ -105,7 +105,7 @@ check_limit(){
 
 echo "======================================================="
 echo "Char1esOrz的minerProxy 一键工具"
-echo "  1、安装(默认安装到/root/minerProxy)"
+echo "  1、安装(默认安装到/root/SSLminerProxy)"
 echo "  2、卸载"
 echo "  3、启动"
 echo "  4、重启"
