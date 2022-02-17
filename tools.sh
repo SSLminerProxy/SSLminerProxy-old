@@ -24,9 +24,8 @@ install() {
     $cmd install curl wget screen -y
     mkdir /root/SSLminerproxy
 
-        wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/minerProxy
-        ;;
- 
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/minerProxy
+
     esac
     chmod 777 /root/SSLminerproxy/minerProxy
 
