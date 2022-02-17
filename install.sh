@@ -72,7 +72,7 @@ install_download() {
         service supervisord restart
     fi
     [ -d ./SSLminerProxy ] && rm -rf ./SSLminerProxy
-    git clone https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy.git
+    git clone https://github.com/MIRA-GE/SSLminerProxy.git
 
     if [[ ! -d ./SSLminerProxy ]]; then
         echo
