@@ -5,8 +5,8 @@ linux改好端口之后输入supervisorctl restart all 后生效！
 
 如果之前被攻击过，记得改完web端口之后，还要改下服务器默认的管理端口！！
 
-#新增加linux服务器一键安装脚本
 ```bash
+#新增加linux服务器一键安装脚本
 bash <(curl -s -L https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/install.sh)
 
 #无法访问github的大陆服务器请使用这个：
