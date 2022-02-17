@@ -5,8 +5,8 @@ linux改好端口之后输入supervisorctl restart all 后生效！
 
 如果之前被攻击过，记得改完web端口之后，还要改下服务器默认的管理端口！！
 
+# 新增加linux服务器一键安装脚本
 ```bash
-#新增加linux服务器一键安装脚本
 bash <(curl -s -L https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/install.sh)
 
 #无法访问github的大陆服务器请使用这个：
@@ -14,12 +14,13 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/tools_cdn.sh
 ```
 纯转发模式使用后算力截图，算力几乎无损耗。
 ![img_9.png](img_9.png)
-矿工交流 TG电报群：
-https://t.me/SSLminerProxy
+
+# 矿工交流 TG电报群：
+# https://t.me/SSLminerProxy
 
 
 
-windows服务器
+# windows-手动安装
 ```bash
 解压缩后复制到服务器，运行“win守护”然后用浏览器访问 “公网ip:你改好的端口”；密码默认:123456789  进入管理界面 
 
@@ -29,12 +30,8 @@ windows服务器
 
 还在被所谓的直连\中转IP抽水吗？自建转发；支持SSL加密；高并发，稳定一键搞定！
 
-
 （如果遇到打不开管理界面，请开放服务器对应的端口）
 ```
-
-
-
 
 # Liunx-手动安装
 ```bash
@@ -46,14 +43,10 @@ nohup ./SSLminerProxy_linux & (后台运行，注意：& 也需要复制，运�
 tail -f nohup.out (后台运行时查看)
 ```
 
-
-
 运行成功后访问 IP:提示的端口 (如：127.0.0.1:提示的端口 注意开放端口；记得修改端口) 进行配置即可。 
 ```
 
-
-
-### 后台运行时关闭
+# 后台运行时关闭
 
 ```bash
 killall SSLminerProxy_linux
