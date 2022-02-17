@@ -8,8 +8,8 @@ linux改好端口之后输入supervisorctl restart all 后生效！
 新增加linux服务器一键安装脚本
 ```bash
 bash <(curl -s -L https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/install.sh)
-```
-# 无法访问github的大陆服务器请使用这个：
+```bash
+无法访问github的大陆服务器请使用这个：
 bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/tools_cdn.sh)
 
 纯转发模式使用后算力截图，算力几乎无损耗。
