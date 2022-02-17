@@ -37,7 +37,10 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/install_cdn.
 （如果遇到打不开管理界面，请开放服务器对应的端口）
 ```
 
+
 # Liunx-手动安装
+强烈建议买服务器选ubuntu系统（最方便）.linux稳定.耗资源小.1核1G可以带600台
+适配优先级ubuntu＞centos＞Debian
 ```bash
 mkdir SSLminerProxy
 cd SSLminerProxy
