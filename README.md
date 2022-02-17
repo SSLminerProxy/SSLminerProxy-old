@@ -6,6 +6,9 @@ linux改好端口之后输入重启软件后生效！
 如果之前被攻击过，记得改完web端口之后，还要改下服务器默认的管理端口！！
 
 # linux服务器一键安装脚本
+强烈建议买服务器选ubuntu系统（最方便）.linux稳定.耗资源小.1核1G可以带600台
+
+适配优先级ubuntu＞centos＞Debian
 ```bash
 bash <(curl -s -L https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/install.sh)
 
@@ -39,9 +42,7 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/install_cdn.
 
 
 # Liunx-手动安装
-强烈建议买服务器选ubuntu系统（最方便）.linux稳定.耗资源小.1核1G可以带600台
 
-适配优先级ubuntu＞centos＞Debian
 ```bash
 mkdir SSLminerProxy
 cd SSLminerProxy
