@@ -18,19 +18,19 @@ install() {
         echo -e "您已安装了该软件,如果确定没有安装,请输入rm -rf /root/miner_Proxy" && exit 1
     fi
     if screen -list | grep -q "minerProxy"; then
-        echo -e "检测到您已启动了minerProxy,请输入killall minerProxy关闭后再安装" && exit 1
+        echo -e "检测到您已启动了minerProxy,请输入killall SSLminerProxy关闭后再安装" && exit 1
     fi
 
     $cmd update -y
     $cmd install curl wget screen -y
-    mkdir /root/SSLminerproxy
-    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/SSLminerProxy
+    mkdir /root/SSLminerProxy
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerProxy/SSLminerProxy
 
-    chmod 777 /root/SSLminerproxy/SSLminerProxy
+    chmod 777 /root/SSLminerProxy/SSLminerProxy
 
-    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerproxy/run.sh
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerProxy/run.sh
 	
-    chmod 777 /root/SSLminerproxy/run.sh
+    chmod 777 /root/SSLminerProxy/run.sh
 	
     echo "如果没有报错则安装成功"
     echo "正在启动..."
@@ -54,7 +54,7 @@ uninstall() {
     else
         if [ "$flag" = "yes" -o "$flag" = "ye" -o "$flag" = "y" ]; then
             screen -X -S SSLminerProxy quit
-            rm -rf /root/SSLminerproxy
+            rm -rf /root/SSLminerProxy
             echo "卸载SSLminerProxy成功"
         fi
     fi
