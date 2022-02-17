@@ -15,8 +15,7 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/tools_cdn.sh
 纯转发模式使用后算力截图，算力几乎无损耗。
 ![img_9.png](img_9.png)
 
-# 矿工交流 TG电报群：
-# https://t.me/SSLminerProxy
+# 矿工交流 TG电报群：https://t.me/SSLminerProxy
 
 
 
@@ -41,16 +40,17 @@ wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy.git
 chmod 777 SSLminerProxy_linux 
 nohup ./SSLminerProxy_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
 tail -f nohup.out (后台运行时查看)
-```
 
 运行成功后访问 IP:提示的端口 (如：127.0.0.1:提示的端口 注意开放端口；记得修改端口) 进行配置即可。 
 ```
+
 
 # 后台运行时关闭
 
 ```bash
 killall SSLminerProxy_linux
 ```
+
 ### 后台运行时查看
 ```bash
 tail -f nohup.out
