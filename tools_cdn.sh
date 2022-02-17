@@ -14,7 +14,7 @@ _yellow() { echo -e ${yellow}$*${none}; }
 _magenta() { echo -e ${magenta}$*${none}; }
 _cyan() { echo -e ${cyan}$*${none}; }
 
-# Root
+# root
 [[ $(id -u) != 0 ]] && echo -e "\n 请使用 ${red}root ${none}用户运行 ${yellow}~(^_^) ${none}\n" && exit 1
 
 cmd="apt-get"
@@ -50,8 +50,8 @@ else
 
 fi
 
-if [ ! -d "/root/SSLminerProxy/" ]; then
-    mkdir /root/SSLminerProxy/
+if [ ! -d "/etc/SSLminerProxy/" ]; then
+    mkdir /etc/SSLminerProxy/
 fi
 
 error() {
@@ -59,7 +59,7 @@ error() {
 }
 
 install_download() {
-    installPath="/root/SSLminerProxy"
+    installPath="/etc/SSLminerProxy"
     $cmd update -y
     if [[ $cmd == "apt-get" ]]; then
         $cmd install -y lrzsz git zip unzip curl wget supervisor
@@ -82,7 +82,7 @@ install_download() {
         echo
         exit 1
     fi
-    cp -rf ./SSLminerProxy /root/
+    cp -rf ./SSLminerProxy /etc/
     if [[ ! -d $installPath ]]; then
         echo
         echo -e "$red 复制文件出错了...$none"
@@ -98,27 +98,27 @@ start_write_config() {
     echo "下载完成，开启守护"
     echo
     chmod a+x $installPath/SSLminerProxy_linux
-    if [ -d "/root/supervisor/conf/" ]; then
-        rm /root/supervisor/conf/MinerProxy.conf -f
-        echo "[program:MinerProxy]" >>/root/supervisor/conf/MinerProxy.conf
-        echo "command=${installPath}/SSLminerProxy_linux" >>/root/supervisor/conf/MinerProxy.conf
-        echo "directory=${installPath}/" >>/root/supervisor/conf/MinerProxy.conf
-        echo "autostart=true" >>/root/supervisor/conf/MinerProxy.conf
-        echo "autorestart=true" >>/root/supervisor/conf/MinerProxy.conf
-    elif [ -d "/root/supervisor/conf.d/" ]; then
-        rm /root/supervisor/conf.d/MinerProxy.conf -f
-        echo "[program:MinerProxy]" >>/root/supervisor/conf.d/MinerProxy.conf
-        echo "command=${installPath}/SSLminerProxy_linux" >>/root/supervisor/conf.d/MinerProxy.conf
-        echo "directory=${installPath}/" >>/root/supervisor/conf.d/MinerProxy.conf
-        echo "autostart=true" >>/root/supervisor/conf.d/MinerProxy.conf
-        echo "autorestart=true" >>/root/supervisor/conf.d/MinerProxy.conf
-    elif [ -d "/root/supervisord.d/" ]; then
-        rm /root/supervisord.d/MinerProxy.ini -f
-        echo "[program:MinerProxy]" >>/root/supervisord.d/MinerProxy.ini
-        echo "command=${installPath}/SSLminerProxy_linux" >>/root/supervisord.d/MinerProxy.ini
-        echo "directory=${installPath}/" >>/root/supervisord.d/MinerProxy.ini
-        echo "autostart=true" >>/root/supervisord.d/MinerProxy.ini
-        echo "autorestart=true" >>/root/supervisord.d/MinerProxy.ini
+    if [ -d "/etc/supervisor/conf/" ]; then
+        rm /etc/supervisor/conf/MinerProxy.conf -f
+        echo "[program:MinerProxy]" >>/etc/supervisor/conf/MinerProxy.conf
+        echo "command=${installPath}/SSLminerProxy_linux" >>/etc/supervisor/conf/MinerProxy.conf
+        echo "directory=${installPath}/" >>/etc/supervisor/conf/MinerProxy.conf
+        echo "autostart=true" >>/etc/supervisor/conf/MinerProxy.conf
+        echo "autorestart=true" >>/etc/supervisor/conf/MinerProxy.conf
+    elif [ -d "/etc/supervisor/conf.d/" ]; then
+        rm /etc/supervisor/conf.d/MinerProxy.conf -f
+        echo "[program:MinerProxy]" >>/etc/supervisor/conf.d/MinerProxy.conf
+        echo "command=${installPath}/SSLminerProxy_linux" >>/etc/supervisor/conf.d/MinerProxy.conf
+        echo "directory=${installPath}/" >>/etc/supervisor/conf.d/MinerProxy.conf
+        echo "autostart=true" >>/etc/supervisor/conf.d/MinerProxy.conf
+        echo "autorestart=true" >>/etc/supervisor/conf.d/MinerProxy.conf
+    elif [ -d "/etc/supervisord.d/" ]; then
+        rm /etc/supervisord.d/MinerProxy.ini -f
+        echo "[program:MinerProxy]" >>/etc/supervisord.d/MinerProxy.ini
+        echo "command=${installPath}/SSLminerProxy_linux" >>/etc/supervisord.d/MinerProxy.ini
+        echo "directory=${installPath}/" >>/etc/supervisord.d/MinerProxy.ini
+        echo "autostart=true" >>/etc/supervisord.d/MinerProxy.ini
+        echo "autorestart=true" >>/etc/supervisord.d/MinerProxy.ini
     else
         echo
         echo "----------------------------------------------------------------"
@@ -135,12 +135,12 @@ start_write_config() {
     fi
 
     changeLimit="n"
-    if [ $(grep -c "root soft nofile" /root/security/limits.conf) -eq '0' ]; then
-        echo "root soft nofile 60000" >>/root/security/limits.conf
+    if [ $(grep -c "etc soft nofile" /etc/security/limits.conf) -eq '0' ]; then
+        echo "etc soft nofile 60000" >>/etc/security/limits.conf
         changeLimit="y"
     fi
-    if [ $(grep -c "root hard nofile" /root/security/limits.conf) -eq '0' ]; then
-        echo "root hard nofile 60000" >>/root/security/limits.conf
+    if [ $(grep -c "etc hard nofile" /etc/security/limits.conf) -eq '0' ]; then
+        echo "etc hard nofile 60000" >>/etc/security/limits.conf
         changeLimit="y"
     fi
 
@@ -158,7 +158,7 @@ start_write_config() {
     echo
     echo "安装完成...守护模式无日志，需要日志的请以nohup ./SSLminerProxy_linux &方式运行"
     echo
-    echo "以下配置文件：/root/SSLminerProxy/config.yml，网页端可修改登录密码token"
+    echo "以下配置文件：/etc/SSLminerProxy/config.yml，网页端可修改登录密码token"
     echo
     echo "[*---------]"
     sleep 1
@@ -172,18 +172,18 @@ start_write_config() {
     sleep 1
     echo "[******----]"
     echo
-    cat /root/SSLminerProxy/config.yml
+    cat /etc/SSLminerProxy/config.yml
     echo "----------------------------------------------------------------"
 }
 
 uninstall() {
     clear
-    if [ -d "/root/supervisor/conf/" ]; then
-        rm /root/supervisor/conf/MinerProxy.conf -f
-    elif [ -d "/root/supervisor/conf.d/" ]; then
-        rm /root/supervisor/conf.d/MinerProxy.conf -f
-    elif [ -d "/root/supervisord.d/" ]; then
-        rm /root/supervisord.d/MinerProxy.ini -f
+    if [ -d "/etc/supervisor/conf/" ]; then
+        rm /etc/supervisor/conf/MinerProxy.conf -f
+    elif [ -d "/etc/supervisor/conf.d/" ]; then
+        rm /etc/supervisor/conf.d/MinerProxy.conf -f
+    elif [ -d "/etc/supervisord.d/" ]; then
+        rm /etc/supervisord.d/MinerProxy.ini -f
     fi
     supervisorctl reload
     echo -e "$yellow 已关闭自启动${none}"
