@@ -41,7 +41,7 @@ install() {
     screen -r SSLminerProxy -p 0 -X stuff "./run.sh"
     screen -r SSLminerProxy -p 0 -X stuff $'\n'
     sleep 1s
-    cat /root/SSLminerproxy/config.yml
+    cat /root/SSLminerProxy/config.yml
     echo "<<<如果成功了,这是您的端口号 请打开 http://服务器ip:端口 访问web服务进行配置:默认端口号为18888,请记录您的token,请尽快登陆并修改账号密码"
     echo "已启动web后台 您可运行 screen -r SSLminerProxy 查看程序输出"
 
