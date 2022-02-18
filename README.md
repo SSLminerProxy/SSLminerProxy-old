@@ -66,3 +66,4 @@ killall SSLminerProxy_linux
 tail -f nohup.out
 ```
 ![img_4.png](img_4.png)
+![img_10.jpg](img_10.jpg)
