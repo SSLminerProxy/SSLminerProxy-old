@@ -17,10 +17,6 @@ install() {
 	if [ -d "/root/miner_Proxy" ]; then
         echo -e "您已安装了该软件,如果确定没有安装,请输入rm -rf /root/miner_Proxy" && exit 1
     fi
-    if screen -list | grep -q "minerProxy"; then
-        echo -e "检测到您已启动了minerProxy,请关闭后再安装" && exit 1
-    fi
-
 
     $cmd update -y
 	
@@ -38,7 +34,7 @@ install() {
 	
     echo "如果没有报错则安装成功"
     echo "正在启动..."
-    nohup ./minerProxy & 
+    nohup ./SSLminerProxy & 
     sleep 1s
     cat /root/SSLminerproxy/config.yml
     echo "<<<如果成功了,这是您的端口号 请打开 http://服务器ip:端口 访问web服务进行配置:默认端口号为18888,请记录您的token,请尽快登陆并修改账号密码"
@@ -70,7 +66,6 @@ restart() {
 }
 
 stop() {
-    if screen -list | grep -q "SSLminerProxy"; then
         killall minerProxy
     fi
     echo "SSLminerProxy 已停止"
