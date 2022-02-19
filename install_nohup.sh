@@ -25,12 +25,13 @@ install() {
     fi
 	
     wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerProxy/SSLminerProxy
-
-    chmod 777 /root/SSLminerProxy/SSLminerProxy
-
+	wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/config.yml -O /root/SSLminerProxy/config.yml
     wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerProxy/run.sh
 	
-    chmod 777 /root/SSLminerProxy/run.sh
+	cd /root/SSLminerProxy/
+	
+	chmod 777 SSLminerProxy
+    chmod 777 run.sh
 	
     echo "如果没有报错则安装成功"
     echo "正在启动..."
