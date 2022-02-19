@@ -67,7 +67,7 @@ restart() {
 
 stop() {
         killall minerProxy
-    fi
+	sleep 0.2s
     echo "SSLminerProxy 已停止"
 }
 
