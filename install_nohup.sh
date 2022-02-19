@@ -20,23 +20,23 @@ install() {
 
     $cmd update -y
 	
-	if [ ! -d "/root/SSLminerproxy" ]; then
-    mkdir /root/SSLminerproxy
+	if [ ! -d "/root/SSLminerProxy" ]; then
+    mkdir /root/SSLminerProxy
     fi
 	
-    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerproxy/minerProxy
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerProxy/minerProxy
 
-    chmod 777 /root/SSLminerproxy/minerProxy
+    chmod 777 /root/SSLminerProxy/minerProxy
 
-    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerproxy/run.sh
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerProxy/run.sh
 	
-    chmod 777 /root/SSLminerproxy/run.sh
+    chmod 777 /root/SSLminerProxy/run.sh
 	
     echo "如果没有报错则安装成功"
     echo "正在启动..."
     nohup ./SSLminerProxy & 
     sleep 1s
-    cat /root/SSLminerproxy/config.yml
+    cat /root/SSLminerProxy/config.yml
     echo "<<<如果成功了,这是您的端口号 请打开 http://服务器ip:端口 访问web服务进行配置:默认端口号为18888,请记录您的token,请尽快登陆并修改账号密码"
     echo "已启动web后台 您可运行 tail -f nohup.out 查看程序输出"
 
