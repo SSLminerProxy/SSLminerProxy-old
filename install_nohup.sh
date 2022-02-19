@@ -24,9 +24,9 @@ install() {
     mkdir /root/SSLminerProxy
     fi
 	
-    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerProxy/minerProxy
+    wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/SSLminerProxy_linux -O /root/SSLminerProxy/SSLminerProxy
 
-    chmod 777 /root/SSLminerProxy/minerProxy
+    chmod 777 /root/SSLminerProxy/SSLminerProxy
 
     wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/run.sh -O /root/SSLminerProxy/run.sh
 	
@@ -66,7 +66,7 @@ restart() {
 }
 
 stop() {
-        killall minerProxy
+        killall SSLminerProxy
 	sleep 0.2s
     echo "SSLminerProxy 已停止"
 }
