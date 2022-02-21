@@ -10,10 +10,10 @@ linux改好端口之后输入重启软件后生效！
 
 适配优先级ubuntu＞centos＞Debian
 ```bash
-bash <(curl -s -L https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy/main/install.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/SSLminerProxy/SSLminerProxy/main/install.sh)
 
 #无法访问github的大陆服务器请使用这个：
-bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/install_cdn.sh)
+bash <(curl -s -L https://cdn.jsdelivr.net/gh/SSLminerProxy/SSLminerProxy/install_cdn.sh)
 
 （提示"screen: 未找到命令" 请先安装screen 再安装SSLminerProxy）
 ```
@@ -46,7 +46,7 @@ bash <(curl -s -L https://cdn.jsdelivr.net/gh/MIRA-GE/SSLminerProxy/install_cdn.
 ```bash
 mkdir SSLminerProxy
 cd SSLminerProxy
-wget https://raw.githubusercontent.com/MIRA-GE/SSLminerProxy.git 
+wget https://raw.githubusercontent.com/SSLminerProxy/SSLminerProxy.git 
 chmod 777 SSLminerProxy_linux 
 nohup ./SSLminerProxy_linux & (后台运行，注意：& 也需要复制，运行完再敲几下回车)
 tail -f nohup.out (后台运行时查看)
