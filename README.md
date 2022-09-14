@@ -1,12 +1,10 @@
-
-最新版SSLminerProxy279多币种版(linux需手动安装，使用命令nohup ./SSLminerProxy279)
-
 多币种最新版地址：https://github.com/SSLminerProxy/SSLproxy
 
-支持ETHW（抽水币种选择ETH）BTC,ETH,ETC,LTC,CFX,RVN,XMR,SERO,ERGO,CKB,BEAM,KASPA,ALPH等全币种无损抽水！
+新版支持ETHW（抽水币种选择ETH）BTC,ETH,ETC,LTC,CFX,RVN,XMR,SERO,ERGO,CKB,BEAM,KASPA,ALPH等全币种无损抽水！
 支持更多专业矿机，芯动A10-A11独家优化！ 
 支持绝大部分币种的转发、加密、自定义抽水、精确到单台设备的24小时数据统计、自定义隧道推送工具、修改矿池本地算力！
 
+本版本也支持ETHW
 安装好之后记得改掉默认的访问端口；文件名是config.yml；用记事本打开更换！linux要改root目录下
 SSLminerProxy里的config，不是root目录下的；
 linux改好端口之后输入重启软件后生效！
