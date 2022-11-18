@@ -16,10 +16,7 @@ linux改好端口之后输入重启软件后生效！
 
 适配优先级ubuntu＞centos＞Debian
 ```bash
-bash <(curl -s -L https://raw.githubusercontent.com/SSLminerProxy/SSLminerProxy/main/install.sh)
-
-#无法访问github的大陆服务器请使用这个：
-bash <(curl -s -L https://cdn.jsdelivr.net/gh/SSLminerProxy/SSLminerProxy/install_cdn.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/SSLminerProxy/SSLproxy/main/linux-install.sh)
 
 （提示"screen: 未找到命令" 请先安装screen 再安装SSLminerProxy）
 ```
