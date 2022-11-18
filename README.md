@@ -18,7 +18,6 @@ linux改好端口之后输入重启软件后生效！
 ```bash
 bash <(curl -s -L https://raw.githubusercontent.com/SSLminerProxy/SSLproxy/main/linux-install.sh)
 
-（提示"screen: 未找到命令" 请先安装screen 再安装SSLminerProxy）
 ```
 自定义SSL证书：请申请一年的免费域名证书（自行百度）申请后下载nginx版本证书，
 将.crt文件改名cert.crt ，将.key文件改成key.pem
