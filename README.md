@@ -1,4 +1,4 @@
-                                            <h1>BTC,LTC等多币种最新版地址，请移步至SSLProxy：https://github.com/SSLminerProxy/SSLproxy</h1>
+                                            <h1> BTC,LTC等多币种最新版地址，请移步至SSLProxy：https://github.com/SSLminerProxy/SSLproxy </h1>
 
 新版支持ETHW（抽水币种选择ETH）BTC,ETH,ETC,LTC,CFX,RVN,XMR,SERO,ERGO,CKB,BEAM,KASPA,ALPH等全币种无损抽水！
 支持更多专业矿机，芯动A10-A11独家优化！ 
