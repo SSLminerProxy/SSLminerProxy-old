@@ -15,11 +15,9 @@ linux改好端口之后输入重启软件后生效！
 如果之前被攻击过，记得改完web端口之后，还要改下服务器默认的管理端口！！
 
 # linux服务器一键安装脚本
-强烈建议买服务器选ubuntu系统（最方便）.linux稳定.耗资源小.1核1G可以带600台
-
-适配优先级ubuntu＞centos＞Debian
+强烈建议买服务器选ubuntu系统（最方便）.linux稳定.耗资源小.1核1G可以带1000台
 ```bash
-bash <(curl -s -L https://raw.githubusercontent.com/SSLminerProxy/SSLproxy/main/linux-install.sh)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/SSLminerProxy/SSLminer/main/sslminer.sh)"
 
 ```
 自定义SSL证书：请申请一年的免费域名证书（自行百度）申请后下载nginx版本证书，
